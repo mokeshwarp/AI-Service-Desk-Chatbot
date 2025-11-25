@@ -9,11 +9,14 @@ const nextConfig: NextConfig = {
         source: "/(.*)",
         headers: [
           { key: "X-Frame-Options", value: "ALLOWALL" },
-          { key: "Content-Security-Policy", value: "frame-ancestors 'self' https://*.atlassian.net" },
-        ],
-      },
+          {
+            key: "Content-Security-Policy",
+            value: "frame-ancestors https://*.atlassian.net https://*.jira.com"
+          }
+        ]
+      }
     ];
-  },
+  }
 };
 
 export default nextConfig;
