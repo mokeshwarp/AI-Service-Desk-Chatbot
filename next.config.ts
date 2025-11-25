@@ -8,14 +8,8 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: [
-          {
-            key: "X-Frame-Options",
-            value: "ALLOWALL", // or remove this header entirely
-          },
-          {
-            key: "Content-Security-Policy",
-            value: "frame-ancestors 'self' https://*.atlassian.net",
-          },
+          { key: "X-Frame-Options", value: "ALLOWALL" },
+          { key: "Content-Security-Policy", value: "frame-ancestors 'self' https://*.atlassian.net" },
         ],
       },
     ];
